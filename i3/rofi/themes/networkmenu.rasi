@@ -40,7 +40,7 @@ prompt {
 
 textbox-prompt-colon {
 	expand: 						false;
-	str: 							"直 ";
+	str: 							"󰖩 ";
     border-radius:                  10px;
     background-color:               @highlight;
     text-color:                     @background;

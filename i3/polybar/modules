@@ -911,6 +911,15 @@ content-padding = 0
 
 click-left = ~/.config/i3/rofi/bin/powermenu
 
+
+[module/openvpn-status]
+type = custom/script
+exec = ~/.config/i3/polybar/scripts/openvpn-status.sh
+interval = 1
+format-prefix = "󰖂 "
+format-foreground = ${color.BLUE}
+
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
 ;;	   / ____/ __ \/ ____/

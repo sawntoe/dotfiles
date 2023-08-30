@@ -12,7 +12,7 @@ makepkg -si
 ```
 
 ```
-yay -S sddm-git i3-git neovim pulseaudio pavucontrol python-i3ipc python-neovim npm fish starship pfetch neofetch polybar maim i3-volume brightnessctl xf86-video-intel discord betterdiscordctl kitty-git picom-git rofi-git ksuperkey firefox lxappearance meson dunst qt5 python-gobject xclip humanity-icon-theme yaru-icon-theme hicolor-icon-theme libnotify notify-send nitrogen noto-fonts ttf-dejavu ttf-liberation noto-fonts-emoji noto-fonts-cjk 
+yay -S sddm-git i3-git neovim pulseaudio pavucontrol python-i3ipc python-neovim npm fish starship pfetch neofetch polybar maim i3-volume brightnessctl xf86-video-intel discord betterdiscordctl kitty-git picom-git rofi-git ksuperkey firefox lxappearance meson dunst qt5 python-gobject xclip humanity-icon-theme yaru-icon-theme hicolor-icon-theme libnotify notify-send nitrogen noto-fonts ttf-dejavu ttf-liberation noto-fonts-emoji noto-fonts-cjk openresolv openvpn openvpn-update-resolv-conf-git
 ```
 
 ## SDDM Setup

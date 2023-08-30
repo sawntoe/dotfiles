@@ -1,0 +1,23 @@
+#!/bin/bash
+
+DIR="$HOME/.config/i3"
+function get_configs()
+{
+    ls $HOME/vpn-configs/udp
+}
+
+
+CONFIG=$( (echo ""; get_configs)  | rofi -dmenu -p "Select VPN config:" -theme $DIR/rofi/themes/workspaces.rasi)
+
+if [ x"" = x"${CONFIG}" ] 
+then
+    export SUDO_ASKPASS=$DIR/bin/askpass.sh
+    sudo -A killall openvpn
+elif [ -n "${CONFIG}" ]
+then
+    cd $HOME/vpn-configs/udp
+    export SUDO_ASKPASS=$DIR/bin/askpass.sh
+    sudo -A killall openvpn
+    sudo -A openvpn $CONFIG
+
+fi

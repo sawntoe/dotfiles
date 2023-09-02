@@ -7,12 +7,17 @@ function get_configs()
 }
 
 
-CONFIG=$( (echo ""; get_configs)  | rofi -dmenu -p "Select VPN config:" -theme $DIR/rofi/themes/workspaces.rasi)
+CONFIG=$( (echo "None"; get_configs)  | rofi -dmenu -p "Select VPN config:" -theme $DIR/rofi/themes/workspaces.rasi)
 
-if [ x"" = x"${CONFIG}" ] 
+if [ x"None" = x"${CONFIG}" ] 
 then
-    export SUDO_ASKPASS=$DIR/bin/askpass.sh
-    sudo -A killall openvpn
+    if pgrep openvpn
+    then
+        export SUDO_ASKPASS=$DIR/bin/askpass.sh
+        sudo -A killall openvpn
+    else
+        exit
+    fi
 elif [ -n "${CONFIG}" ]
 then
     cd $HOME/vpn-configs/udp

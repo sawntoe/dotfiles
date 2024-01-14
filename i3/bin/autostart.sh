@@ -17,8 +17,8 @@ xsetroot -cursor_name left_ptr
 
 
 # Enable Super Keys For Menu
-ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
+# ksuperkey -e 'Super_L=Alt_L|F1' &
+# ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Restore wallpaper
 #hsetroot -root -cover ~/.config/i3/wallpapers/default.png

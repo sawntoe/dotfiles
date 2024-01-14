@@ -87,3 +87,9 @@ let g:python3_host_prog = '/usr/bin/python3'
 " let g:floaterm_borderchars = "─│─│╭╮╯╰"
 lua require('plugins')
 
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+set mouse=

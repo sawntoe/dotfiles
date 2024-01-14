@@ -65,3 +65,4 @@ if [[ ! -f "$RFILE" ]]; then
 	touch ${RFILE}
 fi
 launch_bar
+

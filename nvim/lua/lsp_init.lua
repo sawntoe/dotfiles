@@ -4,7 +4,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 --	capabilities = capabilities
 --}
 
-require('lspconfig').pyright.setup({
+require('lspconfig')['pyright'].setup({
     single_file_support = true,
     capabilities = capabilities,
     handlers = {
@@ -26,5 +26,8 @@ require('lspconfig').pyright.setup({
   })
 
 require('lspconfig').clangd.setup {
+	capabilities = capabilities
+}
+require('lspconfig').texlab.setup {
 	capabilities = capabilities
 }

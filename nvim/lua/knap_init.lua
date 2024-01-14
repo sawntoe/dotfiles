@@ -15,8 +15,12 @@ kmap({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
 
 local gknapsettings = {
     texoutputext = "pdf",
-    textopdf = "pdflatex -synctex=1 -halt-on-error -interaction=batchmode %docroot%",
-    textopdfviewerlaunch = "zathura %outputfile%",
-    textopdfviewerrefresh = "kill -15 %pid%"
+    mdoutputext = "pdf",
+    textopdf = "bash -O extglob -c 'export docroot=%docroot%; rm !(*.tex); pdflatex -synctex=1 -halt-on-error -interaction=batchmode $docroot && biber ${docroot%.*} && pdflatex -synctex=1 -halt-on-error -interaction=batchmode $docroot'",
+    textopdfviewerlaunch = "sioyek %outputfile%",
+    textopdfviewerrefresh = "none",
+    mdtopdf = "pandoc %docroot% -o %outputfile%",
+    mdtopdfviewerlaunch = "sioyek %outputfile%",
+    mdtopdfviewerrefresh = "none",
 }
 vim.g.knap_settings = gknapsettings

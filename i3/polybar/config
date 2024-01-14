@@ -139,7 +139,7 @@ font-4 = "archcraft:size=14;4"
 # Default
 modules-left = menu dot LD i3 RD sep LD cpu RD sep LD memory RD sep 
 modules-center = LD date RD 
-modules-right = openvpn-status dot battery dot network dot
+modules-right = xkeyboard sep virtkeyboard dot openvpn-status dot battery dot network dot
 
 # Alternate
 ;modules-left = openbox 2LD cpu 3LD memory 4LD filesystem 5LD

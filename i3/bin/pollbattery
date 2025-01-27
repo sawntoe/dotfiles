@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import time, os
+
+while True:
+    with open('/sys/class/power_supply/BAT1/capacity', 'r') as file:
+        capacity = int(file.read())
+        print(capacity)
+        if capacity < 20:
+            with open('/sys/class/power_supply/BAT1/status', 'r') as file2:
+                # print("".join("{:02x}".format(ord(c)) for c in file2.read().strip()))
+                # print("".join("{:02x}".format(ord(c)) for c in 'Discharging'))
+                if file2.read().strip() == 'Discharging':
+                    print('Notifying!!!')
+                    os.system('dunstify "Plug in your computer now!" --urgency=critical -r 6969')
+
+    time.sleep(10)
+
+

@@ -1,0 +1,8 @@
+require("config.lazy")
+require("config.ui")
+require("config.lsp")
+require("config.cmp")
+require("config.ts")
+require("config.speed")
+require("config.misc")
+require("config.prefs")
